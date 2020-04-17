@@ -1,0 +1,65 @@
+<app-nav-bar-of-emp> </app-nav-bar-of-emp>
+  
+
+<div class="container mt-4 w-50 text-center">
+  <div class="alert alert-primary txet-center" role="alert">
+    <h3 class="text-center"> Create teacher </h3>
+  </div>
+  <form [formGroup]="form">
+    <div class="col-md-12 ">
+      <div class="form-group">
+        <input [(ngModel)]="emp.name" type="text" id="username" class="form-control" formControlName="username"
+          placeholder="Name">
+        <div class="alert alert-info" *ngIf="username.touched && username.invalid">
+          please ! enter your name mininmam length (20) ;
+
+        </div>
+      </div>
+      <div class="form-group">
+        <input [(ngModel)]="emp.email" formControlName="emial" formControlName="email" type="email" class="form-control"
+          placeholder="Email">
+
+        <div class="alert alert-info" *ngIf="email.touched && email.invalid">
+          please ! enter your mail
+        </div>
+      </div>
+      <div class="form-group">
+        <input [(ngModel)]="emp.phone" formControlName="phone" id="phone" type="number" class="form-control"
+          placeholder="Phone">
+        <div class="alert alert-info" *ngIf="phone.touched && phone.invalid">
+          please ! enter your phone
+        </div>
+      </div>
+      <div class="form-group">
+        <input [(ngModel)]="emp.jop" type="text" formControlName="matrial" id="matrial" class="form-control"
+          placeholder="course description">
+       
+      </div>
+      <div class="form-group">
+        <input [(ngModel)]="emp.img" type="image"  id="img" class="form-control"
+          placeholder="image">
+
+      </div>
+      <div class="form-group">
+        <label for="n" style="color: cornflowerblue; font-weight: bold; font-size: 20px;"> select teaching Level
+        </label>
+        <select name="n" formControlName="level" [(ngModel)]="emp.level" type="text" class="form-control">
+          <option> One </option>
+          <option> Two</option>
+          <option> Three</option>
+          <option> four </option>
+          <option> Other </option>
+
+        </select>
+        <div class="alert alert-info" *ngIf="level.touched && level.invalid">
+          please !! enter your course level
+        </div>
+        <!-- <input [(ngModel)]="emp.level" type="text" class="form-control" placeholder="Level"> -->
+      </div>
+
+      <div class="form-group">
+        <button (click)="addemployee()" class="btn btn-info btn-lg btn-block"> Create</button>
+      </div>
+    </div>
+  </form>
+</div>

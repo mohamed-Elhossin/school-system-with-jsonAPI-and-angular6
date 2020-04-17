@@ -1,0 +1,55 @@
+<app-nav-bar-of-student> </app-nav-bar-of-student>
+
+<div *ngIf="Sudent.length > 0 then  displayEMP else nodata"> </div>
+
+
+<ng-template #displayEMP>
+
+
+  <div class="container mt-5">
+    <div class="alert alert-info txet-center  mt-5" role="alert">
+      <h3 class="text-center"> list OUR student in the school </h3>
+    </div>
+    <table class="table" id="emp">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">ID </th>
+          <th scope="col">NAME </th>
+          <th scope="col">Email </th>
+          <th scope="col">PHONE</th>
+          <th scope="col"> Address </th>
+          <th scope="col">Level</th>
+          <th scope="col">Fees</th>
+
+          <th scope="col">ACTION</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let stud of Sudent">
+          <td> {{stud.id}} </td>
+          <td> {{stud.name }}</td>
+          <td> {{stud.email}}</td>
+          <td> {{stud.phone}}</td>
+          <td> {{stud.address}} </td>
+          <td> {{stud.level}}</td>
+          <td> {{stud.fees}}</td>
+
+          <td>  
+            <button routerLink="/editStud/{{stud.id}}" class="btn btn-info mr-2"> Edit </button>
+            <button class="btn btn-outline-danger" (click)="deletemp(stud.id)"> Delet</button>
+          </td>
+      
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</ng-template>
+<ng-template #nodata>
+  <div class="alert alert-danger txet-center  mt-5" role="alert">
+    <h3 class="text-center"> Sorry !! THERE IS NO DATA FOUND (instal data) </h3>
+  </div>
+
+
+</ng-template>
+

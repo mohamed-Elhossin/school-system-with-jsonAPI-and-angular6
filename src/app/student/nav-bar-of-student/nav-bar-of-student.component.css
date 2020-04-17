@@ -1,0 +1,25 @@
+.navnav{
+    background: linear-gradient( rgba(113, 131, 214, 0.5) ,rgba(12, 49, 5, 0.5) );
+    font-family: 'Courier New';
+    font-size: 25px;
+                          
+    }
+    
+    .navnav li a { 
+        color: black;
+        font-family: 'Courier New', Courier, monospace;
+        transition: all 0.5s;
+        margin-left: 10px;
+    }
+    
+      a:hover   { 
+        color: white;
+background-color: rgb(211, 162, 162);
+font-weight: bold;
+border-radius: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    }
+    
+    
+
+    

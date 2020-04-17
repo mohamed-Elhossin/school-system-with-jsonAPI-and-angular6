@@ -1,0 +1,196 @@
+<app-nav-bar-of-student> </app-nav-bar-of-student>
+
+
+
+<div class="container mt-4 w-50 text-center">
+  <div class="alert alert-primary txet-center" role="alert">
+    <h3 class="text-center"> Create Student </h3>
+  </div>
+  <form [formGroup]="form">
+    <div class="col-md-12 ">
+      <div class="form-group">
+        <input [(ngModel)]="stud.name" type="text" id="username" class="form-control" formControlName="username"
+          placeholder="Name">
+        <div class="alert alert-info" *ngIf="username.touched && username.invalid">
+          please ! enter your name mininmam length (20) ;
+
+        </div>
+      </div>
+      <div class="form-group">
+        <input [(ngModel)]="stud.email" formControlName="emial" formControlName="email" type="text" class="form-control"
+          placeholder="Email">
+
+        <div class="alert alert-info" *ngIf="email.touched && email.invalid">
+          please ! enter your mail
+        </div>
+      </div>
+      <div class="form-group">
+        <input [(ngModel)]="stud.phone" formControlName="phone" id="phone" type="number" class="form-control"
+          placeholder="Phone">
+        <div class="alert alert-info" *ngIf="phone.touched && phone.invalid">
+          please ! enter your phone
+        </div>
+      </div>
+      <div class="form-group">
+        <input [(ngModel)]="stud.address" type="text" formControlName="matrial" id="matrial" class="form-control"
+          placeholder="Address">
+        <div class="alert alert-info" *ngIf="matrial.touched && matrial.invalid">
+          please !! enter your Address
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="n" style="color: cornflowerblue; font-weight: bold; font-size: 20px;"> select teaching Level
+        </label>
+        <select name="n" [(ngModel)]="stud.level" formControlName="level" type="text" class="form-control">
+          <option> One </option>
+          <option> Two</option>
+          <option> Three</option>
+          <option> four </option>
+          <option> Other </option>
+
+        </select>
+        <div class="alert alert-info" *ngIf="level.touched && level.invalid">
+          please !! enter your level
+        </div>
+        <!-- <input [(ngModel)]="emp.level" type="text" class="form-control" placeholder="Level"> -->
+      </div>
+      <div class="form-group">
+        <input [(ngModel)]="stud.fees" type="text" formControlName="matrial" id="matrial" class="form-control"
+          placeholder="Fees">
+        <div class="alert alert-info" *ngIf="matrial.touched && matrial.invalid">
+          please !! enter your fees
+        </div>
+      </div>
+      <div class="alert alert-info">
+        <h1> Tuition Fees : {{ (price*1) + (price2*10) + (price3*1) + (price4*1)+ (price5*1) + (price6*1)}}</h1>
+      </div>
+
+      <div class="form-group">
+        <button (click)="addemployee()" class="btn btn-info btn-lg btn-block"> Create</button>
+      </div>
+    </div>
+  </form>
+
+
+  <div class="alert alert-info">
+    <h3> wolcome in our school ,<br>
+      you can choose your courses now ! </h3>
+
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Matrial </th>
+        <th scope="col">Cost of matrial </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>
+          <select [(ngModel)]="price">
+            <option value="1000"> Finance </option>
+            <option value="1500"> MIS </option>
+            <option value="1200"> Database </option>
+            <option value="3000"> Math</option>
+            <option value="5000"> Stat</option>
+            <option value="5600"> law</option>
+            <option value="2100"> acounting</option>
+            <option value="4000"> programing 1 </option>
+          </select> </td>
+
+        <td>
+          {{price}}
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <select [(ngModel)]="price2">
+          <option value="1000"> Finance </option>
+          <option value="1500"> MIS </option>
+          <option value="1200"> Database </option>
+          <option value="3000"> Math</option>
+          <option value="5000"> Stat</option>
+          <option value="5600"> law</option>
+          <option value="2100"> acounting</option>
+          <option value="4000"> programing 1 </option>
+        </select>
+        <td>
+          {{price2}}
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <select [(ngModel)]="price3">
+          <option value="1000"> Finance </option>
+          <option value="1500"> MIS </option>
+          <option value="1200"> Database </option>
+          <option value="3000"> Math</option>
+          <option value="5000"> Stat</option>
+          <option value="5600"> law</option>
+          <option value="2100"> acounting</option>
+          <option value="4000"> programing 1 </option>
+        </select>
+        <td>
+          {{price3}}
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <select [(ngModel)]="price4">
+          <option value="1000"> Finance </option>
+          <option value="1500"> MIS </option>
+          <option value="1200"> Database </option>
+          <option value="3000"> Math</option>
+          <option value="5000"> Stat</option>
+          <option value="5600"> law</option>
+          <option value="2100"> acounting</option>
+          <option value="4000"> programing 1 </option>
+        </select>
+        <td>
+          {{price4}}
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <select [(ngModel)]="price5">
+          <option value="1000"> Finance </option>
+          <option value="1500"> MIS </option>
+          <option value="1200"> Database </option>
+          <option value="3000"> Math</option>
+          <option value="5000"> Stat</option>
+          <option value="5600"> law</option>
+          <option value="2100"> acounting</option>
+          <option value="4000"> programing 1 </option>
+        </select>
+        <td>
+          {{price5}}
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <select [(ngModel)]="price6">
+          <option value="1000"> Finance </option>
+          <option value="1500"> MIS </option>
+          <option value="1200"> Database </option>
+          <option value="3000"> Math</option>
+          <option value="5000"> Stat</option>
+          <option value="5600"> law</option>
+          <option value="2100"> acounting</option>
+          <option value="4000"> programing 1 </option>
+        </select>
+        <td>
+          {{price6}}
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">Total Cost</td>
+        <td> {{ (price*1) + (price2*10) + (price3*1) + (price4*1)+ (price5*1) + (price6*1)}} </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</div>

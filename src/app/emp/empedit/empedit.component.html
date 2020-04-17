@@ -1,0 +1,31 @@
+<app-nav-bar-of-emp> </app-nav-bar-of-emp>
+<div class="container mt-4">
+  <div class="alert alert-primary txet-center" role="alert">
+    <h3 class="text-center"> Update teachers</h3>
+  </div>
+  <div class="col-md-12">
+    <div class="form-group"><input [(ngModel)]="emp.name" type="text" class="form-control" placeholder="Name"> </div>
+    <div class="form-group"><input [(ngModel)]="emp.email" type="text" class="form-control" placeholder="Email"></div>
+    <div class="form-group"><input [(ngModel)]="emp.phone" type="text" class="form-control" placeholder="Phone"></div>
+    <div class="form-group"><input [(ngModel)]="emp.jop" type="text" class="form-control" placeholder="course desction"></div>
+    <div class="form-group">
+        <label for="n" style="color: cornflowerblue; font-weight: bold; font-size: 20px;"> select Level </label> <select
+        name="n" [(ngModel)]="emp.level" type="text" class="form-control">
+        <option> One </option>
+        <option> Two</option>
+        <option> Three</option>
+        <option> four </option>
+        <option> Other </option>
+    
+      </select>
+        <!-- <input [(ngModel)]="emp.level" type="text" class="form-control" placeholder="Level"> -->
+    </div>
+
+    <div class="form-group">
+
+      <button (click)="updateEmployee()" class="btn btn-info btn-lg btn-block"> Updete</button>
+    </div>
+  </div>
+
+
+</div>

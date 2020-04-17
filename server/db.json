@@ -1,0 +1,71 @@
+{
+  "employee": [
+    {
+      "name": "toma0111",
+      "email": "jbkjgjh",
+      "phone": 117466885,
+      "jop": "math",
+      "level": "Three",
+      "id": 2
+    },
+    {
+      "owner": "ahmed mohamd",
+      "id": 3
+    },
+    {
+      "name": "mohaemd el hossiny",
+      "email": "jbkjgjh",
+      "phone": 117466885,
+      "jop": "math",
+      "level": "Three",
+      "id": 4
+    }
+  ],
+  "student": [
+    {
+      "name": "ahmed elhossiny abdel kader elsayid",
+      "email": "aahmed@yahoo.com",
+      "phone": 111743388,
+      "address": "nfjdknj",
+      "level": "four",
+      "fees": "26500",
+      "id": 1
+    },
+    {
+      "name": "toma01117433885sdfsdjfalksdj",
+      "email": "mvksdamvs.kdm",
+      "phone": 45435453,
+      "address": "nfjdknj",
+      "level": "Two",
+      "fees": "jdfskvj",
+      "id": 2
+    },
+    {
+      "name": "toma0111743388adjhvkjdahkv5",
+      "email": "jdavkjadlvjkdaljvk",
+      "phone": 117466885,
+      "address": "ddddd",
+      "level": "Three",
+      "fees": "jsdnvkj",
+      "id": 3
+    },
+    {
+      "name": "toma el hossiny mohamed",
+      "email": "jkujgwlkjskl",
+      "phone": 2202,
+      "address": "nfjdknj",
+      "level": "One",
+      "fees": "25300",
+      "id": 4
+    },
+    {
+      "name": "toma jvnfsdkjnvkfjbnfsdkjvn",
+      "email": "sdnvn",
+      "phone": 111743388,
+      "address": "nfjdknj",
+      "level": "Two",
+      "fees": "jnadvjfdks",
+      "id": 5
+    }
+  ]
+}
